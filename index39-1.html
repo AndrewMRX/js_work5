@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Функции-7</title>
+</head>
+<body>
+  <script>
+    function calcD (a, b, c) {
+      return b * b - 4 * a * c;
+    }
+    let a, b, c;
+    let valid = false;
+    a = +prompt ('Введите значение переменной a:');
+    let res = (isNaN(a) == true) ? 'Некорректный ввод, введите числовое значение "a"' :
+              (a == 'Infinity') ? 'Вы ввели слишком большое значение "a".':
+              (a == '-Infinity') ? 'Вы ввели слишком маленькое значение "a".' :
+              (a == '') ? 'Вы не ввели значение "a".' : 'valid';
+    
+      if ( res == 'valid' ) {
+              b = +prompt('Введите значение переменной b:');
+              res = (isNaN(b) == true) ? 'Некорректный ввод, введите числовое значение "b"' :
+              (b == 'Infinity') ? 'Вы ввели слишком большое значение "b".' :
+              (b == '-Infinity') ? 'Вы ввели слишком малеькое значение "b".' :
+              (b == '') ? 'Вы не ввели значение "b".' : 'valid';
+        }
+      
+      if (res == 'valid') {
+              c = +prompt('Введите значение переменной c:');
+              res = (isNaN(c) == true) ? 'Некорректный ввод, введите числовое значение "c"' :
+              (c == 'Infinity') ? 'Вы ввели слишком большое значение "c".' :
+              (c == '-Infinity') ? 'Вы ввели слишком малеькое значение "c".' :
+              (c == '') ? 'Вы не ввели значение "c".' : 'valid';
+        }
+      
+       if ( res == 'valid') {
+      
+          let discriminant = calcD( a, b, c);
+          alert('D = ' + discriminant);
+       } else {
+         alert (res);
+       }
+  </script>
+</body>
+</html>
